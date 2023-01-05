@@ -1,7 +1,8 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '101/button_learn.dart';
+import '202/tab_learn.dart';
+// import '101/button_learn.dart';
 // import '101/scaffold_learn.dart';
 // import '101/container_sized_box_learn.dart';
 // import '101/text_view_learn.dart';
@@ -19,9 +20,19 @@ class MyApp extends StatelessWidget {
     //   title: 'Flutter Demo',
     //   home: TextViewLearn(),
     // );
-    return const MaterialApp(
+
+    return MaterialApp(
       title: 'Flutter Demo',
-      home: ButtonLearn(),
+      theme: ThemeData.dark().copyWith(
+          tabBarTheme: const TabBarTheme(
+            labelColor: Colors.white,
+            unselectedLabelColor: Colors.red,
+            indicatorSize: TabBarIndicatorSize.label,
+          ),
+          bottomAppBarTheme: const BottomAppBarTheme(
+            shape: CircularNotchedRectangle(),
+          )),
+      home: const TabLearn(),
     );
   }
 }
