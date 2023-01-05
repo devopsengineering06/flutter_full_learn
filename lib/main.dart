@@ -1,7 +1,8 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '101/container_sized_box_learn.dart';
+import '101/scaffold_learn.dart';
+// import '101/container_sized_box_learn.dart';
 // import '101/text_view_learn.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     // );
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: ContainerSizedBoxLearn(),
+      home: ScaffoldViewLearn(),
     );
   }
 }
