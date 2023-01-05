@@ -1,6 +1,8 @@
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '101/text_view_learn.dart';
+import '101/container_sized_box_learn.dart';
+// import '101/text_view_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,14 +11,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // return CupertinoApp(                      // IOS görünüm için
+    //   title: 'Flutter Demo',
+    //   home: TextViewLearn(),
+    // );
+    return const MaterialApp(
       title: 'Flutter Demo',
-      // theme: ThemeData(primarySwatch: Colors.red),
-      theme: ThemeData.dark(),
-      home: TextViewLearn(),
+      home: ContainerSizedBoxLearn(),
     );
   }
 }
