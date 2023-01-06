@@ -16,18 +16,40 @@ class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   String? name;
   bool _isLoading = false;
+  // late final Dio _networkManager;
+  late final Dio _dio;
+  final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
   @override
   void initState() {
     super.initState();
+    // _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
+    _dio = Dio(BaseOptions(baseUrl: _baseUrl));
     name = 'DevOps';
-    fetchPostItems();
+    // fetchPostItems();
+    fetchPostItemsAdvance();
   }
 
   void _changeLoading() {
     setState(() {
       _isLoading = !_isLoading;
     });
+  }
+
+  Future<void> fetchPostItemsAdvance() async {
+    _changeLoading();
+    final response = await _dio.get('posts');
+    // print(response.statusCode);
+    if (response.statusCode == HttpStatus.ok) {
+      final datas = response.data;
+
+      if (datas is List) {
+        setState(() {
+          _items = datas.map((e) => PostModel.fromJson(e)).toList();
+        });
+      }
+    }
+    _changeLoading();
   }
 
   Future<void> fetchPostItems() async {
