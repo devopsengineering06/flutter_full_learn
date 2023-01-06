@@ -1,4 +1,4 @@
-class PostModel {
+class PostModel1 {
 //  ?  =>  hepsi null gelebilir
 
   int? userId;

@@ -18,7 +18,7 @@ class _ModelViewLearnState extends State<ModelViewLearn> {
   void initState() {
     super.initState();
 
-    final user1 = PostModel();
+    final user1 = PostModel1();
     // ..userId = 1
     // ..body = 'vb';
     user1.body = 'hello';
@@ -38,7 +38,7 @@ class _ModelViewLearnState extends State<ModelViewLearn> {
     final user6 = PostModel6(userId: 1, id: 2, title: 'a', body: 'b');
     // user6.     Özelliklere erişilemez.
 
-    final user7 = PostModel(); // Default değerlerini alır.
+    final user7 = PostModel1(); // Default değerlerini alır.
 
     //Service kullanımı
     final user8 = PostModel8(body: 'a');
