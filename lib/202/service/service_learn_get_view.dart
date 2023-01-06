@@ -1,11 +1,13 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
-import './post_service.dart';
-import './post_model.dart';
+import 'comment_learn_view.dart';
+import 'post_model.dart';
+import 'post_service.dart';
 
 class ServiceLearn extends StatefulWidget {
-  const ServiceLearn({super.key});
+  const ServiceLearn({Key? key}) : super(key: key);
 
   @override
   State<ServiceLearn> createState() => _ServiceLearnState();
@@ -15,21 +17,18 @@ class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   String? name;
   bool _isLoading = false;
-  // late final Dio _networkManager;
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
-// TEST EDİLEBİLİR KOD BAŞLADI
+  // TEST EDIELBIR KOD BASLADI
   late final IPostService _postService;
 
   @override
   void initState() {
     super.initState();
-    // _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
     _dio = Dio(BaseOptions(baseUrl: _baseUrl));
     _postService = PostService();
-    name = 'DevOps';
-    // fetchPostItems();
+    name = 'veli';
     fetchPostItemsAdvance();
   }
 
@@ -39,55 +38,39 @@ class _ServiceLearnState extends State<ServiceLearn> {
     });
   }
 
+  Future<void> fetchPostItems() async {
+    _changeLoading();
+    final response =
+        await Dio().get('https://jsonplaceholder.typicode.com/posts');
+
+    if (response.statusCode == HttpStatus.ok) {
+      final datas = response.data;
+
+      if (datas is List) {
+        setState(() {
+          _items = datas.map((e) => PostModel.fromJson(e)).toList();
+        });
+      }
+    }
+    _changeLoading();
+  }
+
   Future<void> fetchPostItemsAdvance() async {
     _changeLoading();
     _items = await _postService.fetchPostItemsAdvance();
     _changeLoading();
   }
 
-  // Future<void> fetchPostItemsAdvance() async {
-  //   _changeLoading();
-  //   final response = await _dio.get('posts');
-  //   // print(response.statusCode);
-  //   if (response.statusCode == HttpStatus.ok) {
-  //     final datas = response.data;
-
-  //     if (datas is List) {
-  //       setState(() {
-  //         _items = datas.map((e) => PostModel.fromJson(e)).toList();
-  //       });
-  //     }
-  //   }
-  //   _changeLoading();
-  // }
-
-  // Future<void> fetchPostItems() async {
-  //   _changeLoading();
-  //   final response =
-  //       await Dio().get('https://jsonplaceholder.typicode.com/posts');
-  //   // print(response.statusCode);
-  //   if (response.statusCode == HttpStatus.ok) {
-  //     final datas = response.data;
-
-  //     if (datas is List) {
-  //       setState(() {
-  //         _items = datas.map((e) => PostModel.fromJson(e)).toList();
-  //       });
-  //     }
-  //   }
-  //   _changeLoading();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(name ?? ''),
         actions: [
           _isLoading
               ? const CircularProgressIndicator.adaptive()
               : const SizedBox.shrink()
         ],
-        title: Text(name ?? ''),
       ),
       body: _items == null
           ? const Placeholder()
@@ -116,10 +99,12 @@ class _PostCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
-        title: Text(
-          _model?.title ?? '',
-          style: const TextStyle(color: Colors.red),
-        ),
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => CommentLearnView(postId: _model?.id),
+          ));
+        },
+        title: Text(_model?.title ?? ''),
         subtitle: Text(_model?.body ?? ''),
       ),
     );
