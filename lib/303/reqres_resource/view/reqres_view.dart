@@ -21,9 +21,13 @@ class _ReqresViewState extends ReqresViewModel {
       body: ListView.builder(
         itemCount: resources.length,
         itemBuilder: (context, index) {
-          inspect(resources[index]);
+          // inspect(resources[index]);
+          print(resources[index].colorValue);
           return Card(
-            child: Text(resources[index].name ?? ''),
+            color: Color(resources[index].colorValue),
+            child: Text(
+              resources[index].name ?? '',
+            ),
           );
         },
       ),

@@ -30,6 +30,12 @@ class Data {
 
   Data({this.id, this.name, this.year, this.color, this.pantoneValue});
 
+  int get colorValue {
+    var newColor = color?.replaceFirst('#', '0xff') ?? '';
+    print(newColor);
+    return int.parse(newColor);
+  }
+
   Data.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
