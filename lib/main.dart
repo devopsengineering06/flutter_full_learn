@@ -18,7 +18,7 @@ import '303/reqres_resource/view/reqres_view.dart';
 void main() {
   runApp(MultiProvider(
     providers: [
-      Provider(create: (_) => ResourceContext()), // Sadece data tutacak
+      Provider<ResourceContext>(create: (_) => ResourceContext()), // Sadece data tutacak
       // Ekrana haber verilecekse ChangeNotifierProvider kullanılır
       ChangeNotifierProvider<ThemeNotifier>(
         create: (context) => ThemeNotifier(),

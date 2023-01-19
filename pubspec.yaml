@@ -12,6 +12,13 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Core
+  equatable: ^2.0.5 # https://pub.dev/packages/equatable
+
+  # Google
+  json_annotation: ^4.8.0 # https://pub.dev/packages/json_annotation
+  json_serializable: ^6.6.0 # https://pub.dev/packages/json_serializable
+
   # States
   provider: ^6.0.5 # https://pub.dev/packages/provider
 
@@ -28,6 +35,13 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/apple-and-book-png-transparent-apple-and-book-images-274565.png
+    - assets/png/
+    - assets/lottie/
+    - assets/translations/

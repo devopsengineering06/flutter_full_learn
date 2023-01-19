@@ -24,7 +24,7 @@ class ReqresProvider extends ChangeNotifier {
     _changeLoading();
   }
 
-  void saveToLocale(ResourceContext resourceContext) {
+  void saveToLocale(ResourceContext resourceContext, List<Data> resources) {
     resourceContext.saveModel(ResourceModel(data: resources));
   }
 }

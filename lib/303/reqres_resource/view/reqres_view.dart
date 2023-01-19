@@ -6,8 +6,7 @@ import 'package:provider/provider.dart';
 
 import 'package:flutter_learn_full/303/reqres_resource/service/reqres_service.dart';
 import 'package:flutter_learn_full/303/reqres_resource/viewModel/reqres_provider.dart';
-
-import '../../../101/scaffold_learn.dart';
+import '../../../202/image_learn_202.dart';
 import '../../../product/service/project_dio.dart';
 import '../model/resource_model.dart';
 
@@ -100,11 +99,11 @@ class _SaveAndNavigate extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: () {
-          context
-              .read<ReqresProvider>()
-              .saveToLocale(context.read<ResourceContext>());
+          context.read<ReqresProvider>().saveToLocale(
+              context.read<ResourceContext>(),
+              context.read<ReqresProvider>().resources);
           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-            return const ScaffoldViewLearn();
+            return const ImageLearn202();
           }));
         },
         child: const Icon(Icons.ac_unit));
