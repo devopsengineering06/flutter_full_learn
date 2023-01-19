@@ -1,7 +1,8 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '202/service/service_learn_get_view.dart';
+// import '202/service/service_learn_get_view.dart';
+import '303/reqres_resource/view/reqres_view.dart';
 // import '202/service/service_post_learn_view.dart';
 // import '202/service/service_learn_view.dart';
 // import '202/model_view_learn.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           bottomAppBarTheme: const BottomAppBarTheme(
             shape: CircularNotchedRectangle(),
           )),
-      home: const ServiceLearn(),
+      home: const ReqresView(),
     );
   }
 }
