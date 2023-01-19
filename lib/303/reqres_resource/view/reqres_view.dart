@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_full/product/extension/string_extension.dart';
 
 import '../viewModel/reqres_view_model.dart';
 
@@ -22,9 +23,9 @@ class _ReqresViewState extends ReqresViewModel {
         itemCount: resources.length,
         itemBuilder: (context, index) {
           // inspect(resources[index]);
-          print(resources[index].colorValue);
+          print(resources[index].color?.colorValue);
           return Card(
-            color: Color(resources[index].colorValue),
+            color: Color(resources[index].color?.colorValue ?? 0),
             child: Text(
               resources[index].name ?? '',
             ),
