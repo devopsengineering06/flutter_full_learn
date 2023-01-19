@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_full/product/global/resource_context.dart';
+import 'package:provider/provider.dart';
 
 class ScaffoldViewLearn extends StatelessWidget {
   const ScaffoldViewLearn({super.key});
@@ -7,7 +9,16 @@ class ScaffoldViewLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Scaffold samples'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                context.read<ResourceContext>().clear();
+              },
+              icon: const Icon(Icons.remove))
+        ],
+        title: Text(
+            context.read<ResourceContext>().model?.data?.length.toString() ??
+                ''),
       ),
       body: const Text('Merhaba'),
       backgroundColor: Colors.red,
