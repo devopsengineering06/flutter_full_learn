@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 enum LottieItems { themeChange }
 
 extension LottieItemsExtension on LottieItems {

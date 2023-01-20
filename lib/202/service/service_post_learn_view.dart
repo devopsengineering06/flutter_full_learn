@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element, unused_field
+
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -50,11 +52,7 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          _isLoading
-              ? const CircularProgressIndicator.adaptive()
-              : const SizedBox.shrink()
-        ],
+        actions: [_isLoading ? const CircularProgressIndicator.adaptive() : const SizedBox.shrink()],
         title: Text(name ?? ''),
       ),
       body: Column(children: [

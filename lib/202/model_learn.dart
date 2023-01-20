@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 class PostModel1 {
 //  ?  =>  hepsi null gelebilir
 
@@ -41,11 +43,7 @@ class PostModel4 {
   final String title;
   final String body;
 
-  PostModel4(
-      {required this.userId,
-      required this.id,
-      required this.title,
-      required this.body});
+  PostModel4({required this.userId, required this.id, required this.title, required this.body});
 
   // initialize
 }
@@ -57,8 +55,7 @@ class PostModel5 {
   final String _title;
   final String _body;
 
-  int get userId =>
-      _userId; // Encapsülation alanını verir.DIşarıdan userId 'ye erişilir.
+  int get userId => _userId; // Encapsülation alanını verir.DIşarıdan userId 'ye erişilir.
 
   PostModel5({
     required int userId,

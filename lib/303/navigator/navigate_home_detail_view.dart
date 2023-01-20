@@ -12,6 +12,7 @@ class _NavigateHomeDetailState extends State<NavigateHomeDetail> {
   String? _id;
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     _id = widget.id;

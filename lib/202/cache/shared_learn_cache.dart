@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:flutter/material.dart';
 import 'shared_manager.dart';
 import 'user_model.dart';
@@ -78,22 +80,22 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
 
   FloatingActionButton _saveValueButton() {
     return FloatingActionButton(
-        child: const Icon(Icons.save),
         onPressed: (() async {
           changeLoading();
           await _manager.saveString(SharedKeys.counter, _currentValue.toString());
           changeLoading();
-        }));
+        }),
+        child: const Icon(Icons.save));
   }
 
   FloatingActionButton _removeValueButton() {
     return FloatingActionButton(
-        child: const Icon(Icons.remove),
         onPressed: (() async {
           changeLoading();
           await _manager.removeItem(SharedKeys.counter);
           changeLoading();
-        }));
+        }),
+        child: const Icon(Icons.remove));
   }
 }
 
