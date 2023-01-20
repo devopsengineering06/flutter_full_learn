@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
+
 import 'package:flutter_learn_full/product/constant/duration_items.dart';
 import 'package:flutter_learn_full/product/constant/lottie_items.dart';
 import 'package:flutter_learn_full/product/global/theme_notifier.dart';
-import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_learn_full/product/navigator/navigator_routes.dart';
 
 class LottieLearn extends StatefulWidget {
   const LottieLearn({super.key});
@@ -24,6 +26,12 @@ class _LottieLearnState extends State<LottieLearn>
     super.initState();
     controller = AnimationController(
         vsync: this, duration: DurationItems.durationNormal());
+    navigateToHome();
+  }
+
+  Future<void> navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 1));
+    Navigator.of(context).pushNamed(NavigateRoutes.home.withParaf);
   }
 
   @override

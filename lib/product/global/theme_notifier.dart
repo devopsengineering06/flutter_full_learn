@@ -9,5 +9,5 @@ class ThemeNotifier extends ChangeNotifier {
   }
 
   ThemeData get currentTheme =>
-      isLightTheme ? ThemeData.light() : ThemeData.dark();
+      !isLightTheme ? ThemeData.light() : ThemeData.dark();
 }
