@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Animation
+  lottie: ^2.2.0 # https://pub.dev/packages/lottie
+
   # Core
   equatable: ^2.0.5 # https://pub.dev/packages/equatable
 
