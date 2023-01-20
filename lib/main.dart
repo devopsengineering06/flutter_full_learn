@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_full/product/constant/project_items.dart';
 import 'package:provider/provider.dart';
 
 import '303/reqres_resource/lottie_learn.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: ProjectItems.projectName,
       theme: context.watch<ThemeNotifier>().currentTheme,
       home: const LottieLearn(),
     );
