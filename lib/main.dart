@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_full/303/reqres_resource/lottie_learn.dart';
-import 'package:flutter_learn_full/product/constant/project_items.dart';
-import 'package:flutter_learn_full/product/navigator/navigator_custom.dart';
-import 'package:flutter_learn_full/product/navigator/navigator_manager.dart';
-import 'package:flutter_learn_full/product/navigator/navigator_routes.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_learn_full/product/global/resource_context.dart';
-import 'package:flutter_learn_full/product/global/theme_notifier.dart';
+import '303/reqres_resource/lottie_learn.dart';
+import 'product/constant/project_items.dart';
+import 'product/global/resource_context.dart';
+import 'product/global/theme_notifier.dart';
+import 'product/navigator/navigator_custom.dart';
+import 'product/navigator/navigator_manager.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -45,3 +44,5 @@ class MyApp extends StatelessWidget with NavigatorCustom {
     );
   }
 }
+
+

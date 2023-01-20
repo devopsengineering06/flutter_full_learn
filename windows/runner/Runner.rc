@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "flutter_learn_full" "\0"
+            VALUE "FileDescription", "flutter_full_learn" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "flutter_learn_full" "\0"
+            VALUE "InternalName", "flutter_full_learn" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "flutter_learn_full.exe" "\0"
-            VALUE "ProductName", "flutter_learn_full" "\0"
+            VALUE "OriginalFilename", "flutter_full_learn.exe" "\0"
+            VALUE "ProductName", "flutter_full_learn" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_full/product/global/resource_context.dart';
+import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:provider/provider.dart';
 
 class ScaffoldViewLearn extends StatelessWidget {
@@ -16,9 +16,7 @@ class ScaffoldViewLearn extends StatelessWidget {
               },
               icon: const Icon(Icons.remove))
         ],
-        title: Text(
-            context.read<ResourceContext>().model?.data?.length.toString() ??
-                ''),
+        title: Text(context.read<ResourceContext>().model?.data?.length.toString() ?? ''),
       ),
       body: const Text('Merhaba'),
       backgroundColor: Colors.red,

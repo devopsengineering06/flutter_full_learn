@@ -1,4 +1,4 @@
-name: flutter_learn_full
+name: flutter_full_learn
 description: A new Flutter project.
 
 publish_to: "none"
@@ -24,6 +24,7 @@ dependencies:
 
   # States
   provider: ^6.0.5 # https://pub.dev/packages/provider
+  flutter_mobx: ^2.0.6+5 # https://pub.dev/packages/flutter_mobx
 
   # Network
   dio: ^4.0.6 # https://pub.dev/packages/dio

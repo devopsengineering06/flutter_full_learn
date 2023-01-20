@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_learn_full/product/mixin/navigator_mixin.dart';
-import 'package:flutter_learn_full/product/navigator/navigator_routes.dart';
+import 'package:flutter_full_learn/product/mixin/navigator_mixin.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
 
 class NavigateHomeView extends StatefulWidget {
   const NavigateHomeView({super.key});
@@ -10,8 +10,7 @@ class NavigateHomeView extends StatefulWidget {
   State<NavigateHomeView> createState() => _NavigateHomeViewState();
 }
 
-class _NavigateHomeViewState extends State<NavigateHomeView>
-    with NavigatorMixin {
+class _NavigateHomeViewState extends State<NavigateHomeView> with NavigatorMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_learn_full">
+    package="com.example.flutter_full_learn">
    <application
-        android:label="flutter_learn_full"
+        android:label="flutter_full_learn"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

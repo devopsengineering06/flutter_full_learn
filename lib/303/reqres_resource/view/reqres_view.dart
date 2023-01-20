@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_full/product/extension/string_extension.dart';
-import 'package:flutter_learn_full/product/global/resource_context.dart';
-import 'package:flutter_learn_full/product/global/theme_notifier.dart';
+import 'package:flutter_full_learn/product/extension/string_extension.dart';
+import 'package:flutter_full_learn/product/global/resource_context.dart';
+import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_learn_full/303/reqres_resource/service/reqres_service.dart';
-import 'package:flutter_learn_full/303/reqres_resource/viewModel/reqres_provider.dart';
+import 'package:flutter_full_learn/303/reqres_resource/service/reqres_service.dart';
+import 'package:flutter_full_learn/303/reqres_resource/viewModel/reqres_provider.dart';
 import '../../../202/image_learn_202.dart';
 import '../../../product/service/project_dio.dart';
 import '../model/resource_model.dart';
@@ -45,9 +45,7 @@ class _ReqresViewState extends State<ReqresView> with ProjectDioMixin {
           body: Column(
             children: [
               const _TempPlaceHolder(),
-              Expanded(
-                  child: _resourceListView(
-                      context, context.watch<ReqresProvider>().resources)),
+              Expanded(child: _resourceListView(context, context.watch<ReqresProvider>().resources)),
             ],
           ),
         );
@@ -99,9 +97,9 @@ class _SaveAndNavigate extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: () {
-          context.read<ReqresProvider>().saveToLocale(
-              context.read<ResourceContext>(),
-              context.read<ReqresProvider>().resources);
+          context
+              .read<ReqresProvider>()
+              .saveToLocale(context.read<ResourceContext>(), context.read<ReqresProvider>().resources);
           Navigator.of(context).push(MaterialPageRoute(builder: (_) {
             return const ImageLearn202();
           }));

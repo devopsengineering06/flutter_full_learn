@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_learn_full/product/constant/duration_items.dart';
-import 'package:flutter_learn_full/product/constant/lottie_items.dart';
-import 'package:flutter_learn_full/product/global/theme_notifier.dart';
-import 'package:flutter_learn_full/product/navigator/navigator_routes.dart';
+import 'package:flutter_full_learn/product/constant/duration_items.dart';
+import 'package:flutter_full_learn/product/constant/lottie_items.dart';
+import 'package:flutter_full_learn/product/global/theme_notifier.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_routes.dart';
 
 class LottieLearn extends StatefulWidget {
   const LottieLearn({super.key});
@@ -16,16 +16,14 @@ class LottieLearn extends StatefulWidget {
 
 // https://assets3.lottiefiles.com/packages/lf20_ydo1amjm.json
 
-class _LottieLearnState extends State<LottieLearn>
-    with TickerProviderStateMixin {
+class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin {
   late AnimationController controller;
   bool isLight = true;
 
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(
-        vsync: this, duration: DurationItems.durationNormal());
+    controller = AnimationController(vsync: this, duration: DurationItems.durationNormal());
     navigateToHome();
   }
 
@@ -48,8 +46,7 @@ class _LottieLearnState extends State<LottieLearn>
                   context.read<ThemeNotifier>().changeTheme();
                 });
               },
-              child: Lottie.asset(LottieItems.themeChange.lottiePath,
-                  repeat: false, controller: controller))
+              child: Lottie.asset(LottieItems.themeChange.lottiePath, repeat: false, controller: controller))
         ],
       ),
       body: const LottieLoading(),
@@ -61,8 +58,7 @@ class LottieLoading extends StatelessWidget {
   const LottieLoading({
     Key? key,
   }) : super(key: key);
-  final _loadingLottie =
-      'https://assets7.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json';
+  final _loadingLottie = 'https://assets7.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json';
   @override
   Widget build(BuildContext context) {
     return Center(child: Lottie.network(_loadingLottie));

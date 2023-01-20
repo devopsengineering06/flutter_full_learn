@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_full/202/service/comment_model.dart';
+import 'package:flutter_full_learn/202/service/comment_model.dart';
 
 import './post_service.dart';
 
@@ -47,7 +47,7 @@ class _CommentLearnViewState extends State<CommentLearnView> {
         itemCount: _commentsItem?.length ?? 0,
         itemBuilder: (BuildContext context, int index) {
           return Card(
-            child:Text(_commentsItem?[index].email?? '') ,
+            child: Text(_commentsItem?[index].email ?? ''),
           );
         },
       ),
