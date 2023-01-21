@@ -16,7 +16,6 @@ class _ImagePickerGenericViewState extends State<ImagePickerGenericView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _imageUploadCustomManager = ImageUploadCustomManager(LibraryImageUpload());
   }

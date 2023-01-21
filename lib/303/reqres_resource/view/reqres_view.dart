@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/product/extension/string_extension.dart';
-import 'package:flutter_full_learn/product/global/resource_context.dart';
-import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_full_learn/303/reqres_resource/service/reqres_service.dart';
-import 'package:flutter_full_learn/303/reqres_resource/viewModel/reqres_provider.dart';
 import '../../../202/image_learn_202.dart';
+import '../../../product/extension/string_extension.dart';
+import '../../../product/global/resource_context.dart';
+import '../../../product/global/theme_notifier.dart';
 import '../../../product/service/project_dio.dart';
 import '../model/resource_model.dart';
+import '../service/reqres_service.dart';
+import '../viewModel/reqres_provider.dart';
 
 class ReqresView extends StatefulWidget {
   const ReqresView({super.key});
