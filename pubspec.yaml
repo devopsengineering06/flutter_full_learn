@@ -17,7 +17,10 @@ dependencies:
 
   # Core
   equatable: ^2.0.5 # https://pub.dev/packages/equatable
-  collection: ^1.17.0 # https://pub.dev/packages/collection
+  collection: any # https://pub.dev/packages/collection
+
+  # Context
+  kartal: ^2.7.0 # https://pub.dev/packages/kartal
 
   # Google
   image_picker: ^0.8.6+1 # https://pub.dev/packages/image_picker
