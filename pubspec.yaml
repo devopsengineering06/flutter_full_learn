@@ -19,12 +19,14 @@ dependencies:
   equatable: ^2.0.5 # https://pub.dev/packages/equatable
 
   # Google
+  image_picker: ^0.8.6+1 # https://pub.dev/packages/image_picker
   json_annotation: ^4.8.0 # https://pub.dev/packages/json_annotation
   json_serializable: ^6.6.0 # https://pub.dev/packages/json_serializable
 
   # States
   provider: ^6.0.5 # https://pub.dev/packages/provider
   flutter_mobx: ^2.0.6+5 # https://pub.dev/packages/flutter_mobx
+  mobx_codegen: ^2.1.1 # https://pub.dev/packages/mobx_codegen
 
   # Network
   dio: ^4.0.6 # https://pub.dev/packages/dio

@@ -73,4 +73,7 @@
   "window.zoomLevel": 1,
   "files.autoSave": "afterDelay",
   "cSpell.diagnosticLevel": "Hint",
+  "cSpell.enableFiletypes": [
+    "dart"
+  ],
 }
