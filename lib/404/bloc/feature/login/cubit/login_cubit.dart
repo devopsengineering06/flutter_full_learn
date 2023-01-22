@@ -14,9 +14,5 @@ class LoginCubit extends Cubit<LoginState> {
     emit(state.copyWith(isLoading: true, model: User(email: email, password: password)));
     final response = await _loginService.login(state.model!);
     emit(state.copyWith(isLoading: false, isCompleted: response != null));
-
-    print('a');
   }
-
-  void veli() {}
 }

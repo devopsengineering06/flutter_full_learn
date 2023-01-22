@@ -1,3 +1,5 @@
+// hwaFSM  sippet kısayol
+
 import 'package:flutter/material.dart';
 
 class SnippetLearnView extends StatefulWidget {
@@ -14,14 +16,3 @@ class _SnippetLearnViewState extends State<SnippetLearnView> {
     );
   }
 }
-
-class PRoductConstant {
-  static PRoductConstant? _instace;
-  static PRoductConstant get instance {
-    _instace ??= PRoductConstant._init();
-    return _instace!;
-  }
-
-  PRoductConstant._init();
-}
-
