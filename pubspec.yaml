@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Localization
+  easy_localization: ^3.0.1 # https://pub.dev/packages/easy_localization
+
   # Animation
   lottie: ^2.2.0 # https://pub.dev/packages/lottie
 

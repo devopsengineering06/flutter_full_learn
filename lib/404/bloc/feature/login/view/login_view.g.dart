@@ -48,9 +48,9 @@ class _LoginButton extends StatelessWidget {
 
 class _LoginEmailFields extends StatelessWidget {
   const _LoginEmailFields(
-      {Key? key, required TextEditingController controller, required TextEditingController passowrdController})
-      : _emailController = controller,
-        _passwordController = passowrdController,
+      {Key? key, required TextEditingController emailController, required TextEditingController passwordController})
+      : _emailController = emailController,
+        _passwordController = passwordController,
         super(key: key);
 
   final TextEditingController _emailController;

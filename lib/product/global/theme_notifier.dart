@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/theme/light_theme.dart';
+
+import '../../202/theme/light_theme.dart';
 
 class ThemeNotifier extends ChangeNotifier {
   bool isLightTheme = false;

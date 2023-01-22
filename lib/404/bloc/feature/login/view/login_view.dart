@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../202/image_learn_202.dart';
-import '../cubit/login_cubit_state.dart';
-import '../service/login_service.dart';
-import '../../../../../product/service/vexana_network_manager.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../../../../202/image_learn_202.dart';
+import '../../../../../product/service/vexana_network_manager.dart';
 import '../cubit/login_cubit.dart';
+import '../cubit/login_cubit_state.dart';
+import '../service/login_service.dart';
+
 part './login_view.g.dart';
 
 class LoginView extends StatefulWidget {
@@ -45,8 +46,8 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               children: [
                 _LoginEmailFields(
-                  controller: _emailController,
-                  passowrdController: _passwordController,
+                  emailController: _emailController,
+                  passwordController: _passwordController,
                 ),
                 _LoginButton(
                     formLoginKey: _formLoginKey,
