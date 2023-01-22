@@ -31,7 +31,15 @@ class MyApp extends StatelessWidget with NavigatorCustom {
     return MaterialApp(
       title: ProjectItems.projectName,
       theme: context.watch<ThemeNotifier>().currentTheme,
-      // home: const LottieLearn(),
+
+      // Cihaz üzerinde yapılan text değişiklikleri vb den uygulama etkilenmez
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1),
+          child: child ?? const SizedBox(),
+        );
+      },
+
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
           builder: (context) {
@@ -43,6 +51,7 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       onGenerateRoute: onGenerateRoute,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
       home: const LoginView(),
+      // home: const LottieLearn(),
     );
   }
 }
