@@ -1,4 +1,4 @@
-// hwaFSM  sippet kısayol
+// hwaFSM  snippet
 
 import 'package:flutter/material.dart';
 
