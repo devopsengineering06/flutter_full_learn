@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '303/package/kartal/kartal_view.dart';
 import '303/reqres_resource/lottie_learn.dart';
+import '404/bloc/feature/login/view/login_view.dart';
 import 'product/constant/project_items.dart';
 import 'product/global/resource_context.dart';
 import 'product/global/theme_notifier.dart';
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       // routes: NavigatorRoutes().items,
       onGenerateRoute: onGenerateRoute,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-      home: const KartalView(),
+      home: const LoginView(),
     );
   }
 }

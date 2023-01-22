@@ -7,7 +7,8 @@ abstract class ILoginService {
   final INetworkManager networkManager;
 
   ILoginService(this.networkManager);
-  Future<IResponseModel<TokenModel?>?> login(LoginModel model);
+
+  Future<TokenModel?> login(User model);
 
   final String _loginPath = 'api/login';
 }
@@ -16,8 +17,9 @@ class LoginService extends ILoginService {
   LoginService(super.networkManager);
 
   @override
-  Future<IResponseModel<TokenModel?>?> login(LoginModel model) async {
-    return await networkManager.send<TokenModel, TokenModel>(_loginPath,
+  Future<TokenModel?> login(User model) async {
+    final response = await networkManager.send<TokenModel, TokenModel>(_loginPath,
         data: model, parseModel: TokenModel(), method: RequestType.POST);
+    return response.data;
   }
 }

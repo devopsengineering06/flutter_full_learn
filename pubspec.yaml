@@ -30,10 +30,11 @@ dependencies:
   # States
   provider: ^6.0.5 # https://pub.dev/packages/provider
   flutter_mobx: ^2.0.6+5 # https://pub.dev/packages/flutter_mobx
+  flutter_bloc: ^8.1.1 # https://pub.dev/packages/flutter_bloc
 
   # Network
-  dio: ^4.0.4 # https://pub.dev/packages/dio
-  vexana: ^2.8.0 # https://pub.dev/packages/vexana/install
+  dio: ^4.0.6 # https://pub.dev/packages/dio
+  vexana: ^3.3.2 # https://pub.dev/packages/vexana/install
 
   # Cache
   shared_preferences: ^2.0.16 # https://pub.dev/packages/shared_preferences

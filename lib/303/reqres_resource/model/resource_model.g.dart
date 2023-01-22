@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: unused_element
-
 part of 'resource_model.dart';
 
 // **************************************************************************
@@ -28,6 +26,7 @@ Data _$DataFromJson(Map<String, dynamic> json) => Data(
       pantoneValue: json['pantoneValue'] as String?,
     );
 
+// ignore: unused_element
 Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

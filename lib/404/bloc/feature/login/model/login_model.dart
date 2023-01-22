@@ -1,22 +1,23 @@
-import 'package:json_annotation/json_annotation.dart';
 import 'package:vexana/vexana.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'login_model.g.dart';
 
 @JsonSerializable()
-class LoginModel extends INetworkModel<LoginModel> {
-  final String email;
-  final String password;
+class User extends INetworkModel<User> {
+  String? email;
+  String? password;
 
-  LoginModel(this.email, this.password);
-
-  @override
-  LoginModel fromJson(Map<String, dynamic> json) {
-    return _$LoginModelFromJson(json);
-  }
+  User({
+    this.email,
+    this.password,
+  });
 
   @override
-  Map<String, dynamic>? toJson() {
-    return _$LoginModelToJson(this);
-  }
+  User fromJson(Map<String, dynamic> json) => User.fromJson(json);
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+  @override
+  Map<String, dynamic>? toJson() => _$UserToJson(this);
 }
