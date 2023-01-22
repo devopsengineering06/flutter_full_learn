@@ -32,19 +32,21 @@ dependencies:
   flutter_mobx: ^2.0.6+5 # https://pub.dev/packages/flutter_mobx
 
   # Network
-  dio: ^4.0.6 # https://pub.dev/packages/dio
+  dio: ^4.0.4 # https://pub.dev/packages/dio
+  vexana: ^2.8.0 # https://pub.dev/packages/vexana/install
 
   # Cache
   shared_preferences: ^2.0.16 # https://pub.dev/packages/shared_preferences
 
   cupertino_icons: ^1.0.5 # https://pub.dev/packages/cupertino_icons
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
-  build_runner: ^2.3.3
+  build_runner: ^2.3.3 # https://pub.dev/packages/build_runner/install
   mobx_codegen: ^2.1.1 # https://pub.dev/packages/mobx_codegen
   mockito: ^5.3.2 # https://pub.dev/packages/mockito
 

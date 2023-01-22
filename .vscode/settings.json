@@ -37,7 +37,7 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "enabled",
-  "editor.fontSize": 14,
+  "editor.fontSize": 17,
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "dart.debugExternalLibraries": true,
@@ -56,7 +56,7 @@
   "explorer.confirmDragAndDrop": false,
   "enableTelemetry": false,
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -70,10 +70,10 @@
   "ShortcutMenuBar.startDebugging": true,
   "ShortcutMenuBar.redo": true,
   "bracketPairColorizer.depreciation-notice": false,
-  "window.zoomLevel": 1,
-  "files.autoSave": "afterDelay",
-  "cSpell.diagnosticLevel": "Hint",
-  "cSpell.enableFiletypes": [
-    "dart"
+  "window.zoomLevel": 0,
+  "cSpell.words": [
+    "pantone",
+    "Unkown",
+    "vexana"
   ],
 }
